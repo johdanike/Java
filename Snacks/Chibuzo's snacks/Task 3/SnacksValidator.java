@@ -6,7 +6,7 @@ public class SnacksValidator{
 		Snacks();
 	}
 
-	public static void Snacks(){
+	public void Snacks(){
 	Scanner input = new Scanner(System.in);
 
 		String gatePass = """
@@ -30,14 +30,16 @@ public class SnacksValidator{
 
 	switch(entry){
 		case "1": System.out.print("\nFunction that returns the largest element in a list");
-		System.out.println("Enter numbers to compute");
-		int numbers = input.nextInt();
+			int [] list = {2,6,5,2,7,8,1,2,9,45,2,5,23,12,8,6};	
+			int result = SnackTest.largestElementFinder(list);
+			System.out.println("The largest element in this list is "+result);
 
-		int [] list = new int[numbers];		
-		//int largest = list[0];
-		System.out.print(SnacksFunction.largestElement(list));
-		System.out.printf("The largest element in this list is %d",largest);
-
+	
+		/**case "2": 
+			System.out.print(SnackTest.OddPosition(number));
+			System.out.print("The odd numbers are "+oddPosition);
+			**/
+			
 	}
 
 

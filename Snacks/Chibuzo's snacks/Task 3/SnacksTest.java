@@ -25,5 +25,22 @@ public class SnacksTest{
 
 	}
 
+	@Test
+	public void testThatPrintsElementsAtOddIndices(){
+		SnackTest snacktest = new SnackTest();
+		int [] number = {2,5,3,5,7,8,9,2};
+		String [] result = snacktest.OddPosition(number);
+		assertEquals(odd, result);
+
+	}
+
+	@Test
+	public void testThatPrintsEvenElementsAtEvenIndices(){
+		SnackTest snacktest = new SnackTest();
+		int [] number = {2,5,3,5,7,8,9,2};
+		String [] result = snacktest.EvenPosition(number);
+		assertEquals(even, result);
+	}
+
 
 }

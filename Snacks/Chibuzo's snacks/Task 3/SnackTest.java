@@ -24,6 +24,24 @@ public class SnackTest{
 		return rev;
 	}
 
+	/***public String [] OddPosition(int [] number){
+		String odd = "";
+		for(int counter = 0; counter < number.length; counter++){
+			if(number[counter] % 2 != 0){
+				odd += number[counter];
+			}
+		}
+		return odd;
+	}
+
+	public String [] EvenPosition(int [] number){
+		String even = "";
+		for (int counter = 0; counter < number.length; counter++){
+			if(number[counter] % 2 == 0)even += number[counter];
+		}
+		return even;
+	}**/
+
 
 
 }
