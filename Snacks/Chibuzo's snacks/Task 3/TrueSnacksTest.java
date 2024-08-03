@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.Assert.assertArrayEquals;
 import java.util.Arrays;
 
-public class SnacksTest{
+public class TrueSnacksTest{
 	@Test
 	public void testToCheckLargestElement(){
 		SnackTest snacktest = new SnackTest();
@@ -28,19 +28,31 @@ public class SnacksTest{
 	@Test
 	public void testThatPrintsElementsAtOddIndices(){
 		SnackTest snacktest = new SnackTest();
-		int [] number = {2,5,3,5,7,8,9,2};
-		String [] result = snacktest.OddPosition(number);
-		assertEquals(odd, result);
+		int [] number = {3,4,5,6,7,4,7,6,5,3,2};
+		int [] result = snacktest.elementsInOddPositionsArray(number);
+		int [] odd = {4, 6, 4, 6, 3};
+		assertArrayEquals(odd, result);
 
 	}
 
 	@Test
-	public void testThatPrintsEvenElementsAtEvenIndices(){
+	public void testThatPrintsElementsAtEvenIndices(){
 		SnackTest snacktest = new SnackTest();
-		int [] number = {2,5,3,5,7,8,9,2};
-		String [] result = snacktest.EvenPosition(number);
-		assertEquals(even, result);
+		int [] number = {3,4,5,6,7,4,7,6,5,3,2,0};
+		int [] result = snacktest.elementsInEvenPositionsArray(number);
+		int [] even = {3, 5, 7, 7, 5, 2};
+		assertArrayEquals(even, result);
 	}
+
+	@Test
+	public void testThatSumsElementsOfAList(){
+		SnackTest snacktest = new SnackTest();
+		int[] array  = {3,4,5,6,7,4,7,6,5,3,2};
+		int result = snacktest.sumOfElementsInList(array);
+		int sum = 52;
+		assertEquals(sum, result);
+	}
+
 
 
 }

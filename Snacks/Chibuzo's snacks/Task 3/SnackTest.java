@@ -24,23 +24,44 @@ public class SnackTest{
 		return rev;
 	}
 
-	/***public String [] OddPosition(int [] number){
-		String odd = "";
-		for(int counter = 0; counter < number.length; counter++){
-			if(number[counter] % 2 != 0){
-				odd += number[counter];
-			}
+
+	public static int [] elementsInOddPositionsArray(int [] main){
+		int newLength;
+		if(main.length % 2 == 1)newLength = main.length / 2;
+		else newLength = (main.length / 2) + 1;
+
+		int odd [] = new int[newLength];
+		int counter = 0;
+		for(int index = 1; index < main.length ; index += 2){
+			odd[counter] = main[index];
+			counter++;
 		}
 		return odd;
 	}
 
-	public String [] EvenPosition(int [] number){
-		String even = "";
-		for (int counter = 0; counter < number.length; counter++){
-			if(number[counter] % 2 == 0)even += number[counter];
+	public static int [] elementsInEvenPositionsArray(int [] main){
+		int newLength;
+		if(main.length % 2 == 0)newLength = main.length / 2;
+		else newLength = (main.length / 2) + 1;
+
+		int even [] = new int[newLength];
+		int counter = 0;
+		for(int index = 0; index < main.length ; index += 2){
+			even[counter] = main[index];
+			counter++;
 		}
 		return even;
-	}**/
+	}
+
+
+	public int sumOfElementsInList(int [] main){
+		int sum = 0;
+		for(int index = 0; index < main.length ; index ++){
+			sum += main[index];
+		}
+		return sum;
+	}
+
 
 
 
