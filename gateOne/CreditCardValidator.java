@@ -20,6 +20,11 @@ public class CreditCardValidator{
 			System.out.println("**Credit Card Validity Status: "+stage5);
 			System.out.println("*****************************************");
 			//System.out.println("**Total: "+total);
+			double one = secondDigitRightToLeft(cardNum);
+			System.out.println("First: "+one);
+			double two = firstDigitRightToLeft(cardNum);
+			System.out.println("Second: "+two);
+			System.out.println("**Total: "+total);
 
 		}
 	}
@@ -41,10 +46,10 @@ public class CreditCardValidator{
 
 	public static double secondDigitRightToLeft(String cardNum){
 		double total1 = 0;
-		for(int index = cardNum.length()-1; index > 0; index-=2){
+		for(int index = cardNum.length()-2; index >= 0; index-=2){
 			int number = Integer.parseInt(String.valueOf(cardNum.charAt(index)));
 			number= number * 2;
-			if(number > 9) number = number/10 + number%10;
+			if(number > 9)number = number/10 + number%10;
 			total1 += number;
 			number = 0;
 		}
@@ -53,7 +58,7 @@ public class CreditCardValidator{
 
 	public static double firstDigitRightToLeft(String cardNum){
 		double total2 = 0;
-		for(int index = cardNum.length() - 1; index > 0; index--){
+		for(int index = cardNum.length()-1; index >= 0; index-=2){
 			int number = Integer.parseInt(String.valueOf(cardNum.charAt(index)));
 			total2 += number;
 			number = 0;
@@ -68,8 +73,7 @@ public class CreditCardValidator{
 
 	public static String validityChecker(String cardNum){
 		String checker = "";
-			double quotient = addTotal1Total2(cardNum) / 10;
-			if(quotient % 10 == 0)checker = "Valid";
+			if(addTotal1Total2(cardNum) % 10 ==0)checker = "Valid";
 			else checker = "Invalid";
 			return checker;
 	}
