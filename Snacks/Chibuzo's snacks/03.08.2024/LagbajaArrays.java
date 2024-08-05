@@ -32,7 +32,7 @@ public class LagbajaArrays{
 				num++;
 				counter = 1;
 				total[row] = sum;
-				average[row] = sum / numberOfSubjects;
+				average[row] = (double)sum / numberOfSubjects;
 		}
 		
 		System.out.print("STUDENT");
@@ -43,29 +43,16 @@ public class LagbajaArrays{
 
       		System.out.printf("%12s%12s%12s%n","TOTAL","AVERAGE", "POSITION");
   
-		for(int loop = 0;loop < numberOfStudents; loop++){
-			int count = 1;
-			for(int inner = 0; inner < numberOfSubjects; inner++){
-				//System.out.print("Student "+count);
-				//System.out.printf("%10s%15s%20.2f", lagbaja[loop][inner], total[loop], average[loop] );
-     				System.out.println("Student "+count + "\t" + lagbaja[loop][inner] + "\t" + total[loop] + "\t" + average[loop]); 
-				System.out.println();
-			}
+		 for (int loop = 0; loop < numberOfStudents; loop++) {
+            		System.out.printf("Student %d ", loop + 1);
+           		 for (int inner = 0; inner < numberOfSubjects; inner++) {
+               			 System.out.printf("%10d", lagbaja[loop][inner]);
+           		 }
+          		System.out.printf("%10d%10.2f", total[loop], average[loop]);
+            		System.out.println();
+       		}
 
-			count++;
-
-		}
 		
-
-
-
-
-
-
-
-
-
-
 	  	//String[] header3 = {"TOTAL","AVERAGE", "POSITION"};
        		//for(String index :header3){
            	//	System.out.printf("%15s", index);
