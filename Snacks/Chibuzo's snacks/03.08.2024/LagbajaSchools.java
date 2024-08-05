@@ -22,10 +22,10 @@ public class LagbajaSchools{
 		for(int index = 0; index < register.length; index++){
 			System.out.println("\n\nStudent"+(index + 1)+ ": ");
 			for(int counter = 0; counter < register[index].length; counter++){
-				if (register > 101 && register < 101){
+				//if (register > 101 && register < 101){
 				System.out.print("Enter score for subject"+ (counter + 1)+ ": ");
 				register[index][counter] = input.nextInt();
-				}
+				//}
 			}
 		}
 		System.out.print(Arrays.deepToString(register));
@@ -48,12 +48,12 @@ public class LagbajaSchools{
 			System.out.print(Arrays.toString(average));
 
 		//sorting program
-		int [] newArray = sorted;
-		Arrays.sort(newArray);
-		for(int count = 0; count < numStudents; count++){
-			for(int index = 0; index < numStudents; index++){
-				if(sorted[count]==newArray[index]) 
-					classPosition[count]=sorted.length-count;
+		//int [] newArray = sorted;
+		Arrays.sort(sorted);
+		for(int count = 0; count < sorted.length; count++){
+			for(int index = 0; index < sorted.length; index++){
+				if(sorted[count]==total[index]) 
+					classPosition[count]=sorted.length-index;
 			}
 		}
 		System.out.print(Arrays.toString(classPosition));
