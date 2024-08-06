@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class CreditCardValidator{
 	public static void main(String[]args){
+
 	Scanner input = new Scanner(System.in);
 		System.out.print("WELCOME TO JOHDAN'S CREDIT CARD VALIDITY CHECKER\n");
 		System.out.print("Hello kindly enter your credit card details to verify: ");

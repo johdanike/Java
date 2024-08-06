@@ -8,11 +8,9 @@ public class CheckOutApp2{
 	Scanner input = new Scanner(System.in);
 		System.out.print("Welcome to SemiColon Super Stores");
 	
-		ArrayList<String> customersName = new ArrayList<String>();
 		ArrayList<String> productBought = new ArrayList<String>();
 		ArrayList<Integer> numOfUnits = new ArrayList<Integer>();
 		ArrayList<Double> howMuchPerUnits = new ArrayList<Double>();
-		ArrayList<Double> pricePerProduct = new ArrayList<Double>();
 
 		System.out.print("\n\nMAIN BRANCH");
 		System.out.println("\nLOCATION: 312, HERBERT MACAULAY WAY, SABO YABA, LAGOS");
@@ -21,41 +19,88 @@ public class CheckOutApp2{
 		String pass = "";
 
 		System.out.println("What is the customer's name?");
-		customersName.add(input.next());
 		
 		double total = 0.0;
 		double discount =0;
+		double discountableAmount = 0;
 		double subTotal = 0;
 		final double VAT = 7.5 / 100;
-	
-		while(!(pass.equalsIgnoreCase("no"))){
 
-			System.out.println("What did the user buy? ");
+		System.out.println("What did the user buy? ");
 			productBought.add(input.next());
 
 			System.out.println("How many pieces?");
-			numOfUnits.add(input.nextInt());
+			int pieces = input.nextInt();
+			numOfUnits.add(pieces);
 
 			System.out.println("How much per unit?");
-			howMuchPerUnits.add(input.nextDouble());
+			double price = input.nextDouble();
+			howMuchPerUnits.add(price);
+			System.out.print(howMuchPerUnits);
+			
+			System.out.println("Add more Items?");
+			pass = input.next();
+
+			System.out.println(price);
+		while(!pass.equalsIgnoreCase("no")){
+
+			System.out.println("What did the user buy? ");
+			productBought.add(input.next());
+			
+
+			System.out.println("How many pieces?");
+			pieces = input.nextInt();
+			numOfUnits.add(pieces);
+
+			System.out.println("How much per unit?");
+			price = input.nextDouble();
+			howMuchPerUnits.add(price);
+			System.out.println(price);
 			
 			System.out.println("Add more Items?");
 			pass = input.next();
 			
 		}
 
-			System.out.print(howMuchPerUnits);
+			//System.out.print(howMuchPerUnits);
 			
-			double amount = 0;
 			for(int index = 0; index < productBought.size(); index++){	
-				amount = numOfUnits(index) * howMuchPerUnits(index);
-				howMuchPerUnits.size() += amount;
-
+			double amount = 0;
+				total = numOfUnits.get(index) * howMuchPerUnits.get(index);
+				//howMuchPerUnits.add(amount);
 			}
 
-			System.out.print(howMuchPerUnits);
 
 
+			System.out.print("\nWhat is your name?");
+			String cashiersName = input.next();
+
+			System.out.println("How much discount will he get?");
+			int discountRate = input.nextInt();
+				
+			//for(int index = 0; index < numOfUnits.size(); index++){
+			//	total += howMuchPerUnits.get(index); 
+			//}
+
+			System.out.print(total);
+
+			discountableAmount = total - ((discountRate * 0.01) * total);
+			System.out.println(discountableAmount);
+
+			//discount = total - discountableAmount;
+			System.out.println("Discount: "+discountableAmount);
+			System.out.print(total);
+
+		
+			
+
+			
+
+			
+			
+			
+
+			
 		
 
  

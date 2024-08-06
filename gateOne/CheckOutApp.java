@@ -8,62 +8,44 @@ public class CheckOutApp{
 	Scanner input = new Scanner(System.in);
 		System.out.print("Welcome to SemiColon Super Stores");
 	
-		ArrayList<String> customersName = new ArrayList<String>();
-		//ArrayList<String> productBought = new ArrayList<String>();
-		//ArrayList<Integer> numOfUnits = new ArrayList<Integer>();
-		//ArrayList<Integer> howMuchPerUnits = new ArrayList<String>();
-
-		//String gatePass = continueOrExit(entry);
-		//if(gatepass == "no.equalsIgnoreCase")exit;
-
+		ArrayList<String> productBought = new ArrayList<String>();
+		ArrayList<Integer> numOfUnits = new ArrayList<Integer>();
+		ArrayList<Integer> howMuchPerUnits = new ArrayList<Integer>();
 
 		System.out.print("\n\nMAIN BRANCH");
 		System.out.println("\nLOCATION: 312, HERBERT MACAULAY WAY, SABO YABA, LAGOS");
 		System.out.println("TEL: 03293828343");
 
+		String gatePass = "";
+		while (!(gatepass.equalsIgnoreCase("no"))){
+			String product = collectItemBought();
+			productBought.add(product);
+			String noUnits = howManyPiecesWasBought();
+			numOfUnits.add(noUnits);
+			int pricePerUnit = howMuchPerUnit();
+			howMuchPerUnits.add(pricePerUnit);
+		}
+
+
+
 	}
 
-	/**public static String getCustomersName(String name){
-		System.out.println("What is the customer's name?");
-		return customersName.add(input.next());
-	}
-
-
-	public static String addProduct(String product){
+	public static String collectItemBought(){
 		System.out.println("What did the user buy? ");
-		productBought.add(input.next());
-		return productBought.add();
-	}
+		return input.next();
 
-	public static int addUnits(int units){
+	}
+	
+	public static int howManyPiecesWasBought(){
 		System.out.println("How many pieces?");
-		numOfUnits.add(input.nextInt());
-		return numOfUnits.add();
+		return input.nextInt();
 	}
 
-	public static double addPricePerUnit(double pricePerUnit){
+	public static double howMuchPerUnit(){
 		System.out.println("How much per unit?");
-		add.howMuchPerUnits(input.nextDouble());
-		return howMuchPerUnits.add();
+		return input.nextDouble(;)
 	}
 
-	private static boolean continueOrExit(String pass){
-		String entry = "";
-		System.out.println("Add more Items?");
-		entry = input.next();
-		return entry;	
-	}
-
-	private static double productPrice(double price){
-		price = addPricePerUnit(pricePerUnit) * addUnits(units);
-		return price;
-	}**/
 
 
-}
-
-
-
-		
-
-
+	
