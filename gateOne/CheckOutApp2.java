@@ -1,7 +1,5 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.time.format.DateTimeFormatter;
-import java.time.LocalDateTime;
 
 public class CheckOutApp2{
 	public static void main(String[]args){
