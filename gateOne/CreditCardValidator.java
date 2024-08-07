@@ -49,7 +49,7 @@ public class CreditCardValidator{
 		double total1 = 0;
 		for(int index = cardNum.length()-2; index >= 0; index-=2){
 			int number = Integer.parseInt(String.valueOf(cardNum.charAt(index)));
-			number= number * 2;
+			number = number * 2;
 			if(number > 9)number = number/10 + number%10;
 			total1 += number;
 			number = 0;
