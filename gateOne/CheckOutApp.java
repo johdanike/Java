@@ -17,13 +17,15 @@ public class CheckOutApp{
 		System.out.println("TEL: 03293828343");
 
 		String gatePass = "";
-		while (!(gatepass.equalsIgnoreCase("no"))){
+		while (!(gatePass.equalsIgnoreCase("no"))){
 			String product = collectItemBought();
 			productBought.add(product);
 			String noUnits = howManyPiecesWasBought();
 			numOfUnits.add(noUnits);
 			int pricePerUnit = howMuchPerUnit();
 			howMuchPerUnits.add(pricePerUnit);
+			System.out.println("Add more item?");
+			gatePass = input.next(gatePass);
 		}
 
 
@@ -43,9 +45,9 @@ public class CheckOutApp{
 
 	public static double howMuchPerUnit(){
 		System.out.println("How much per unit?");
-		return input.nextDouble(;)
+		return input.nextDouble();
 	}
 
 
 
-	
+}

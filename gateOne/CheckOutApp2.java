@@ -74,7 +74,7 @@ public class CheckOutApp2{
 		System.out.println("Cashier: "+cashiersName);
 		System.out.println("Customer Name: "+customersName);
 		System.out.println("\n=========================================================\n");
-		System.out.printf("%20s%10s%10s%15s", "ITEM", "QTY", "PRICE", "TOTAL(NGN)");
+		System.out.printf("%22s%10s%10s%15s", "ITEM", "QTY", "PRICE", "TOTAL(NGN)");
 		System.out.print("\n---------------------------------------------------------\n");
 
 		//TABLE CONTENTS S.OUT
