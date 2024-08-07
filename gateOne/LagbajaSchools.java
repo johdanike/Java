@@ -80,9 +80,9 @@ public class LagbajaSchools{
 
 		//Summary
 		System.out.print("Subject Summary");
-		for(int index = 0; index < numSubjects; index++){
-			System.out.print("Subject"+(index+1)+" : ");
-			for(int count = 0; count < numSubjects; count++){
+		int 
+		for(int row = 0; index < numSubjects[0].length; index++){
+			for(int count = 0; count < numStudents.length; count++){
 				System.out.printf("Highest scoring student is: Student %d coring %d", classPosition[0]);
 			}
 		}

@@ -79,29 +79,21 @@ public class CheckOutApp2{
 		System.out.println("\n=======================================================\n");
 		System.out.printf("%20s%10s%10s%15s", "ITEM", "QTY", "PRICE", "TOTAL(NGN)");
 		System.out.print("\n-------------------------------------------------------\n");
-		for(int index = 0; index < productBought.size(); index++){
-			for(int inner = 0; inner < index; inner++){
-				System.out.println("\t"+inner);
-			}
+
+		//TABLE CONTENTS S.OUT
+		for(int index = 0; index <productBought.size(); index++ ){
+			System.out.printf("%20s%10d%.2f",productBought.get(index),numOfUnits.get(index),howMuchPerUnits.get(index) );
 		}
-		for(int index = 0; index < numOfUnits.size(); index++){
-			for(int inner = 0; inner < index; inner++){
-				System.out.println("\t"+inner);
-			}
-		}
-		for(int index = 0; index < howMuchPerUnits.size(); index++){
-			for(int inner = 0; inner < index; inner++){
-				System.out.println("\t"+inner);
-			}
-		}
+		
+
 		System.out.print("\n-------------------------------------------------------\n");
-		System.out.print("\nSub Total: "+totalBeforeDiscount);	
-		System.out.print("\nDiscount:		 "+discountableAmount);
-		System.out.println("\nVAT @ 17.50%:		"+vat);
+		System.out.printf("%n%60s%.2f", "Sub Total: ", totalBeforeDiscount);	
+		System.out.printf("%n%60s%.2f", "Discount: ",discountableAmount);
+		System.out.printf("%n%60s%.2f", "VAT @ 17.50%: ",vat);
 		System.out.println("\n=======================================================\n");	
-		System.out.print("\nBill Total:			 "+discount);
+		System.out.printf("%n%60s%.2f", "Bill Total: ", discount);
 		System.out.println("\n=======================================================\n");
-		System.out.println("\nTHIS IS NOT A RECIEPT KINDLY PAY "+discount);
+		System.out.printf("%n%60s%.2f", "THIS IS NOT A RECIEPT KINDLY PAY ", discount);
 		System.out.println("\n=======================================================\n");
 	
  
