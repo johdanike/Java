@@ -47,13 +47,13 @@ public class CheckOutApp2{
 		}
 		for(int index = 0; index < productBought.size(); index++){	
 			total = numOfUnits.get(index) * howMuchPerUnits.get(index);
-			pricePerProduct.add(total);
+			pricePerProduct.add(total);		
 		}
 
 		System.out.print("\nWhat is your name?");
 		String cashiersName = input.next();
 
-		System.out.println("How much discount will he get?");
+		System.out.printf("How much discount will %s get?",customersName );
 		int discountRate = input.nextInt();
 		double rate = (double)discountRate / 100;
 		
