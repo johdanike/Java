@@ -9,17 +9,15 @@ public class MBTI{
 		System.out.println("\nWhat is your name?");
 		String name = input.next();
 
-		System.out.println("Enter choice: ");
-		response = input.next();
-		String result = response(response );
-		System.out.println(result); 
-		
-
-
+		response(); 
+		//ExtrovertIntrovert(response());
+		//SensingIntuitive(response());
+		//ThinkingFeeling(response());
+		//JudgingPerceptive(response());
 
 	}
 
-	public static String [] category(String [] questions){
+	public static String [] category(){
 		String [] questions = {
 			"1: A: Expend energy, enjoy groups	B: Conserve energy, enjoy one-on-one",
 			"2: A: Interpret literally		B: Look for meaning and possibilities",
@@ -45,17 +43,25 @@ public class MBTI{
 		return questions;
 	}
 
-	public static String response(String a, String b){
-		String [] answer = new String [questions.length];
-		
-		for(int index = 0; index < category.questions.length; index++){
-			
-			answer = questions[index];
+	public static String[] response(){
+	Scanner input = new Scanner(System.in);
+		String [] answer = new String [20];
+		String[] questions = category();
+		for(int index = 0; index < questions.length; index++){
+
+			System.out.println(questions[index]);			
+			System.out.println("Enter choice: ");
+			String choice = input.next();
+			answer[index] = choice;
+			if(!answer[index].equalsIgnoreCase("a") && !answer[index].equalsIgnoreCase("b")){
+				throw new IllegalArgumentException("Invalid entry");
+				// response();
+			}
 		}
 		return answer;
 	}
 
-	public static int [] ExtrovertIntrovert(String [] response){
+	public static String ExtrovertIntrovert(String [] response){
 		int countFirstA = 0;
 		int countFirstB = 0;
 		String first = response[0];
@@ -65,19 +71,19 @@ public class MBTI{
 		String fifth = response[16];
 		
 		for(int index = 0; index < response.length; index++){
-			if(first.charAt(index).equalsIgnoreCase('A') || second.charAt(index).equalsIgnoreCase('A') || third.charAt(index).equalsIgnoreCase('A') || fourth.charAt(index).equalsIgnoreCase('A') || fifth.charAt(index).equalsIgnoreCase('A')){
+			if(first.charAt(index) == ('A') || second.charAt(index) == ('A') || third.charAt(index) == ('A') || fourth.charAt(index) == ('A') || fifth.charAt(index) == ('A')){
 				countFirstA++;
 			}
-			else if(first.charAt(index).equalsIgnoreCase('B') || second.charAt(index).equalsIgnoreCase('	B') || third.charAt(index).equalsIgnoreCase('B') || fourth.charAt(index).equalsIgnoreCase('B') || fifth.charAt(index).equalsIgnoreCase('B')){
+			else if(first.charAt(index) == ('B') || second.charAt(index) == ('B') || third.charAt(index) == ('B') || fourth.charAt(index) == ('B') || fifth.charAt(index) == ('B')){
 				countFirstB++;
 			}
 		}
-			if(countFirstA > countFirstB)return "E",
+			if(countFirstA > countFirstB)return "E";
 			else return "I";	
 	} 
 
 
-	public static int [] SensingIntuitive(String [] response){
+	public static String SensingIntuitive(String [] response){
 		int countSecondA = 0;
 		int countSecondB = 0;
 		String first = response[1];
@@ -87,20 +93,20 @@ public class MBTI{
 		String fifth = response[17];
 		
 		for(int index = 0; index < response.length; index++){
-			if(first.charAt(index).equalsIgnoreCase('A') || second.charAt(index).equalsIgnoreCase('A') || third.charAt(index).equalsIgnoreCase('A') || fourth.charAt(index).equalsIgnoreCase('A') || fifth.charAt(index).equalsIgnoreCase('A')){
+			if(first.charAt(index) == ('A') || second.charAt(index) == ('A') || third.charAt(index) == ('A') || fourth.charAt(index) == ('A') || fifth.charAt(index) == ('A')){
 				countSecondA++;
 			}
-			else if(first.charAt(index).equalsIgnoreCase('B') || second.charAt(index).equalsIgnoreCase('	B') || third.charAt(index).equalsIgnoreCase('B') || fourth.charAt(index).equalsIgnoreCase('B') || fifth.charAt(index).equalsIgnoreCase('B')){
+			else if(first.charAt(index) == ('B') || second.charAt(index) == ('B') || third.charAt(index) == ('B') || fourth.charAt(index) == ('B') || fifth.charAt(index) == ('B')){
 				countSecondB++;
 			}
 		}
-			if(countSecondA > countSecondB)return "E",
-			else return "I";	
+			if(countSecondA > countSecondB)return "S";
+			else return "N";	
 	} 
 
 
 
-	public static int [] ThinkingFeeling(String [] response){
+	public static String ThinkingFeeling(String [] response){
 		int countThirdA = 0;
 		int countThirdB = 0;
 		String first = response[2];
@@ -109,19 +115,19 @@ public class MBTI{
 		String fourth = response[14];
 		String fifth = response[18];
 		for(int index = 0; index < response.length; index++){
-			if(first.charAt(index).equalsIgnoreCase('A') || second.charAt(index).equalsIgnoreCase('A') || third.charAt(index).equalsIgnoreCase('A') || fourth.charAt(index).equalsIgnoreCase('A') || fifth.charAt(index).equalsIgnoreCase('A')){
+			if(first.charAt(index) == ('A') || second.charAt(index) == ('A') || third.charAt(index) == ('A') || fourth.charAt(index) == ('A') || fifth.charAt(index) == ('A')){
 				countThirdA++;
 			}
-			else if(first.charAt(index).equalsIgnoreCase('B') || second.charAt(index).equalsIgnoreCase('	B') || third.charAt(index).equalsIgnoreCase('B') || fourth.charAt(index).equalsIgnoreCase('B') || fifth.charAt(index).equalsIgnoreCase('B')){
+			else if(first.charAt(index) == ('B') || second.charAt(index) == ('B') || third.charAt(index) == ('B') || fourth.charAt(index) == ('B') || fifth.charAt(index) == ('B')){
 				countThirdB++;
 			}
 		}
-			if(countThirdA > countThirdB)return "E",
-			else return "I";	
+			if(countThirdA > countThirdB)return "T";
+			else return "F";	
 	} 
 
 
-	public static int [] JudgingPerceptive(String [] response){
+	public static String JudgingPerceptive(String [] response){
 		int countFourthA = 0;
 		int countFourthB = 0;
 		String first = response[3];
@@ -130,19 +136,19 @@ public class MBTI{
 		String fourth = response[15];
 		String fifth = response[19];
 		for(int index = 0; index < response.length; index++){
-			if(first.charAt(index).equalsIgnoreCase('A') || second.charAt(index).equalsIgnoreCase('A') || third.charAt(index).equalsIgnoreCase('A') || fourth.charAt(index).equalsIgnoreCase('A') || fifth.charAt(index).equalsIgnoreCase('A')){
+			if(first.charAt(index) == ('A') || second.charAt(index) == ('A') || third.charAt(index) == ('A') || fourth.charAt(index) == ('A') || fifth.charAt(index) == ('A')){
 				countFourthA++;
 			}
-			else if(first.charAt(index).equalsIgnoreCase('B') || second.charAt(index).equalsIgnoreCase('	B') || third.charAt(index).equalsIgnoreCase('B') || fourth.charAt(index).equalsIgnoreCase('B') || fifth.charAt(index).equalsIgnoreCase('B')){			
+			else if(first.charAt(index) == ('B') || second.charAt(index) == ('B') || third.charAt(index) == ('B') || fourth.charAt(index) == ('B') || fifth.charAt(index) == ('B')){			
 				countFourthB++;
 			}
 		}
-			if(countFourthA > countFourthB)return "E",
-			else return "I";
+			if(countFourthA > countFourthB)return "J";
+			else return "P";
 	} 
 
-
-/**	public static SummaryField(String summary){
+/***
+	public static SummaryField(String summary){
 		for(int index = 0; index < answer.length; index++){
 			System.out.printf("Hello %s %nYou selected: %n%s%nNumber of A selected: %nNumber of B selected: ",name,index );
 			System.out.println();
