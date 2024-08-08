@@ -6,8 +6,6 @@ public class MBTI{
 		System.out.println("MYERS BRIGGS QUESTIONAIRE");
 		System.out.println("\nThis free personality tet reveals who youbreally are. Discover the 16 personalities created by Myers and Briggs, test your personality type, and find your strengths.");
 
-		System.out.println("\nWhat is your name?");
-		String name = input.next();
 
 		response(); 
 		//ExtrovertIntrovert(response());
@@ -15,6 +13,12 @@ public class MBTI{
 		//ThinkingFeeling(response());
 		//JudgingPerceptive(response());
 
+	}
+
+	private static String setName(String name){
+		System.out.println("\nWhat is your name?");
+		String name = input.next();
+		return name;
 	}
 
 	public static String [] category(){
@@ -147,13 +151,15 @@ public class MBTI{
 			else return "P";
 	} 
 
-/***
-	public static SummaryField(String summary){
+	public static String SummaryField(String summary){
+		MBTI mainNew = new MBTI();
+		String[] answer = response();
+		mainNew.main();
 		for(int index = 0; index < answer.length; index++){
 			System.out.printf("Hello %s %nYou selected: %n%s%nNumber of A selected: %nNumber of B selected: ",name,index );
 			System.out.println();
 		}
-	}**/
+	}
 
 
 }
