@@ -8,16 +8,18 @@ public class MBTI{
 
 
 		response(); 
-		//ExtrovertIntrovert(response());
-		//SensingIntuitive(response());
+		ExtrovertIntrovert(response());
+		SensingIntuitive(response());
 		//ThinkingFeeling(response());
 		//JudgingPerceptive(response());
+		//SummaryField();
 
 	}
 
 	private static String setName(String name){
+		Scanner input = new Scanner(System.in);
 		System.out.println("\nWhat is your name?");
-		String name = input.next();
+		name = input.next();
 		return name;
 	}
 
@@ -151,15 +153,23 @@ public class MBTI{
 			else return "P";
 	} 
 
-	public static String SummaryField(String summary){
+	/**public static String SummaryField(String summary){
 		MBTI mainNew = new MBTI();
+		String name = setName(summary);
 		String[] answer = response();
-		mainNew.main();
 		for(int index = 0; index < answer.length; index++){
 			System.out.printf("Hello %s %nYou selected: %n%s%nNumber of A selected: %nNumber of B selected: ",name,index );
 			System.out.println();
+			final[index] = 
 		}
+
+		String.concate();
+
+
+		return final;
 	}
+
+	**/
 
 
 }

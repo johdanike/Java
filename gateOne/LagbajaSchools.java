@@ -22,10 +22,12 @@ public class LagbajaSchools{
 		for(int index = 0; index < register.length; index++){
 			System.out.println("\n\nStudent"+(index + 1)+ ": ");
 			for(int counter = 0; counter < register[index].length; counter++){
-				//if (register > 101 && register < 101){
 				System.out.print("Enter score for subject"+ (counter + 1)+ ": ");
 				register[index][counter] = input.nextInt();
-				//}
+				if (register > 101 && register < 101){
+					Syste
+				}
+
 			}
 		}
 		System.out.print(Arrays.deepToString(register));
@@ -78,14 +80,14 @@ public class LagbajaSchools{
             		System.out.println();
        		}
 
-		//Summary
+		/*//Summary
 		System.out.print("Subject Summary");
 		int 
 		for(int row = 0; index < numSubjects[0].length; index++){
 			for(int count = 0; count < numStudents.length; count++){
 				System.out.printf("Highest scoring student is: Student %d coring %d", classPosition[0]);
 			}
-		}
+		}**/
 
 
 
