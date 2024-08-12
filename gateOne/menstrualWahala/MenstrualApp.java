@@ -13,7 +13,7 @@ public class MenstrualApp{
 		System.out.print("How old are you? ");
 		String age = input.nextInt();
 
-		/**if(howOldAreYou(age))System.out.println("You are not supposed to have a period, you are probvably in your menopause, consider further medical examination.");
+		if(howOldAreYou(age))System.out.println("You are not supposed to have a period, you are probvably in your menopause, consider further medical examination.");
 
 		else{ }**/
 		int beginning = firstDayOfLastPeriod();
@@ -26,14 +26,17 @@ public class MenstrualApp{
 	
 
 	public boolean howOldAreYou(String age){
-		for()
-		int number = Integer.parseInt(String.valueOf(age.charAt(index)))
+		int number = Integer.parseInt(String.valueOf(age.charAt(index)));
 		return mensesCalculator.length > 52;
+		
 	}
 	
 	//date of last period
 	public static int firstDayOfLastPeriod(int firstDay){
-		System.out.print("Enter the firstday of your last period: ");
+		LocalDateTime now = LocalDateTime.now();
+		DateFormat mensAppFormat = new DateFormat("dd-MM-yyyy");
+
+		System.out.print("Enter the firstday of your last period in this format(dd-MM-yyyy): ");
 		firstDay = input.nextInt();
 		
 		
