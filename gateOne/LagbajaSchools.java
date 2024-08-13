@@ -16,7 +16,7 @@ public class LagbajaSchools{
 		int [] sorted = new int[numStudents];
 		double [] average = new double[numStudents];
 		int [] classPosition = new int [numStudents];
-		System.out.print(Arrays.deepToString(register));
+		//System.out.print(Arrays.deepToString(register));
 
 
 		for(int index = 0; index < register.length; index++){
@@ -24,13 +24,8 @@ public class LagbajaSchools{
 			for(int counter = 0; counter < register[index].length; counter++){
 				System.out.print("Enter score for subject"+ (counter + 1)+ ": ");
 				register[index][counter] = input.nextInt();
-				//if (register > 101 && register < 101){
-				//	Syste
-				//}
-
 			}
 		}
-		System.out.print(Arrays.deepToString(register));
 
 		for(int tot = 0 ; tot < register.length; tot++){
 			int sum = 0;
@@ -44,10 +39,11 @@ public class LagbajaSchools{
 			sorted[tot] = sum;
 			sum = 0;	
 			mid = 0;
-		}	
-			System.out.print(Arrays.toString(total));
-			System.out.print(Arrays.toString(average));
-
+			//System.out.print(Arrays.toString(total));
+			//System.out.print(Arrays.toString(average));
+	
+			}
+			
 		//sorting program
 		//int [] newArray = sorted;
 		Arrays.sort(sorted);
@@ -78,11 +74,11 @@ public class LagbajaSchools{
 
 		System.out.print("Subject Summary");
 		
-		for(int row = 0; index < numSubjects[0].length; index++){
-			for(int count = 0; count < numStudents.length; count++){
-				System.out.printf("Highest scoring student is: Student %d coring %d", classPosition[0]);
-			}
-		}
+		//for(int row = 0; index < numSubjects[0].length; index++){
+		//	for(int count = 0; count < numStudents.length; count++){
+		//		System.out.printf("Highest scoring student is: Student %d coring %d", classPosition[0]);
+		//	}
+		//}
 
 
 

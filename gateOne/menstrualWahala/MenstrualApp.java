@@ -1,7 +1,8 @@
 import java.util.Scanner;
 import java.util.Calendar;
 import java.time.LocalDate;
-import java.time.Format.DateTimeFormater;
+import java.time.temporal.ChronoUnit;
+import java.time.format.DateTimeFormater;
 
 
 public class MenstrualApp{
@@ -13,7 +14,7 @@ public class MenstrualApp{
 		System.out.print("How old are you? ");
 		String age = input.nextInt();
 
-		if(howOldAreYou(age))System.out.println("You are not supposed to have a period, you are probvably in your menopause, consider further medical examination.");
+		if(!age.equals.howOldAreYou(age))System.out.println("You are not supposed to have a period, you are probvably in your menopause, consider further medical examination.");
 
 		else{ }**/
 		int beginning = firstDayOfLastPeriod();
@@ -33,11 +34,11 @@ public class MenstrualApp{
 	
 	//date of last period
 	public static int firstDayOfLastPeriod(int firstDay){
-		LocalDateTime now = LocalDateTime.now();
-		DateFormat mensAppFormat = new DateFormat("dd-MM-yyyy");
+		LocalDateTime now = LocalDateTime.parse(firstDay, mensAppFormater);
+		DateFormat mensAppFormat = DateFormat.ofPattern("dd-MM-yyyy");
 
 		System.out.print("Enter the firstday of your last period in this format(dd-MM-yyyy): ");
-		firstDay = input.nextInt();
+		firstDay = new nextInt();
 		
 		
 	}
@@ -57,6 +58,7 @@ public class MenstrualApp{
 
 	//expected next period start date == last period date + circle(averageLengthOfCycle)
 	public static int expectedNextDate(int nextDate){
+
 		date = firstDayOfLastPeriod(firstDay) + averageLengthOfCycle(aveLength);
 		return date;
 	}

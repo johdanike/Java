@@ -98,8 +98,9 @@ public class CheckOutApp2{
 
 	System.out.println("How much did the customer give you?");
 	double deposit = input.nextDouble();
+	if(deposit < 0)System.out.print("Invalid amount value, enter a valid amount please");
 
-
+	
 	System.out.println("\nSEMICOLON STORES");
 		System.out.println("MAIN BRANCH");
 		System.out.println("LOCATION: 312, HERBERT MACAULAY WAY, SABO YABA, LAGOS.");
