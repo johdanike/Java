@@ -9,15 +9,27 @@ public class CreditCardValidator{
 		System.out.print("Hello kindly enter your credit card details to verify: ");
 		String cardNum = input.next();
 
-		if(validate(cardNum))System.out.println("Invalid - Check number and try again");
-		else {
+		if(validate(cardNum)){
 			String cardType = getCategory(cardNum);
 			double total = addTotal1Total2(cardNum);
+			String stage5 = validityChecker(cardNum);
+
 			System.out.println("*****************************************");
 			System.out.println("**Credit Card Type: "+cardType);
 			System.out.println("**Credit Card Number: "+cardNum);
 			System.out.println("**Credit Card Digit Length: "+cardNum.length());
 			String stage5 = validityChecker(cardNum);
+			System.out.println("**Credit Card Validity Status: "+stage5);
+			System.out.println("*****************************************");
+		}
+		else {
+			cardType = getCategory(cardNum);
+			total = addTotal1Total2(cardNum);
+			System.out.println("*****************************************");
+			System.out.println("**Credit Card Type: "+cardType);
+			System.out.println("**Credit Card Number: "+cardNum);
+			System.out.println("**Credit Card Digit Length: "+cardNum.length());
+			stage5 = validityChecker(cardNum);
 			System.out.println("**Credit Card Validity Status: "+stage5);
 			System.out.println("*****************************************");
 			//System.out.println("**Total: "+total);

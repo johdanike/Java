@@ -20,18 +20,21 @@ public class PizzaWahala{
 		productCatalogy();
 
 	}
-		public static void productCatalogy(){
+
+		
+	public static void productCatalogy(){
 		Scanner input = new Scanner(System.in);
-		System.out.println("\nPlease select a Pizza type");
+		System.out.println("\n\nPlease select a Pizza type (1 - 4)");
 		String pizzaType = input.next();
-
-		String guestNumber = "";
-		int numberOfBoxes = 0;
-		int numberOfLeftOver = 0;
-		int price = 0; 
-		int guestNo = 0;
-
-		switch(pizzaType){
+				
+			String guestNumber = "";
+			int numberOfBoxes = 0;
+			int numberOfLeftOver = 0;
+			int price = 0; 
+			int guestNo = 0;
+	
+			
+			switch(pizzaType){
 			case "1":
 				System.out.println("How may we be of service?\nHow many guest will you be serving?");
 				guestNumber = input.next();
@@ -73,7 +76,10 @@ public class PizzaWahala{
 				System.out.printf("%nNumber left over = %d slices",numberOfLeftOver);
 				productCatalogy();
 			default: System.out.println("Invalid input, your satisfaction is our business, please try again.");
+				productCatalogy();
+
 		}
-			
+
+		
 	}
 }
