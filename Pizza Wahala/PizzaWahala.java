@@ -10,21 +10,24 @@ public class PizzaWahala{
 		String calalogy = "";
 
 
-		System.out.print("Pizza type \tNumber Of Slices \tPrice Per Box");
-		System.out.printf("%s%8s%15s%20s","1", "Sapa Size","  4","  2000");
-		System.out.printf("%s%n%8s%14s%20s","2", "Small Money" ,"  6" ,"  2400");
-		System.out.printf("%s%n%8s%15s%20s","3", "Big Boys" ,"  8" ,"  3000");
-		System.out.printf("%s%n%8s%15s%20s","4", "Odogwu", "  12", "  4200");
+		System.out.print("S/N \tPizza type \tNumber Of Slices \tPrice Per Box");
+		System.out.printf("%n%s%15s%15s%22s","1", "Sapa Size","  4","  2000");
+		System.out.printf("%n%s%15s%15s%22s","2", "Small Money" ,"  6" ,"  2400");
+		System.out.printf("%n%s%15s%15s%22s","3", "Big Boys" ,"  8" ,"  3000");
+		System.out.printf("%n%s%15s%15s%22s","4", "Odogwu", "  12", "  4200");
 			
 		System.out.println();
 		productCatalogy();
 
+	}
 		public static void productCatalogy(){
 		Scanner input = new Scanner(System.in);
-		System.out.println("Please select a Pizza type");
+		System.out.println("\nPlease select a Pizza type");
 		String pizzaType = input.next();
+
 		String guestNumber = "";
 		int numberOfBoxes = 0;
+		int numberOfLeftOver = 0;
 		int price = 0; 
 		int guestNo = 0;
 
@@ -33,33 +36,41 @@ public class PizzaWahala{
 				System.out.println("How may we be of service?\nHow many guest will you be serving?");
 				guestNumber = input.next();
 				guestNo = Integer.valueOf(guestNumber);
-				numberOfBoxes = guestNo / 4 + guestNo % 4;
+				numberOfBoxes = (guestNo + 4) / 4;				
 				price = 2000 * numberOfBoxes;
-				System.out.printf("Number Of Boxes = %d\nPrice = N%d",numberOfBoxes,price);
+				numberOfLeftOver = ((int)numberOfBoxes * 4) - guestNo;
+				System.out.printf("Number Of Boxes = %d boxes\nPrice = N%d",numberOfBoxes,price);
+				System.out.printf("%nNumber left over = %d slices",numberOfLeftOver);
 				productCatalogy();
 			case "2":
 				System.out.println("How may we be of service?\nHow many guest will you be serving?");
 				guestNumber = input.next();
 				guestNo = Integer.valueOf(guestNumber);
-				numberOfBoxes = guestNo / 6 + guestNo % 6;
+				numberOfBoxes = (guestNo + 6) / 6;
 				price = 2400 * numberOfBoxes;
-				System.out.printf("Number Of Boxes = %d\nPrice = N%d",numberOfBoxes,price);
+				numberOfLeftOver = ((int)numberOfBoxes * 6) - guestNo;
+				System.out.printf("Number Of Boxes = %d boxes\nPrice = N%d",numberOfBoxes,price);
+				System.out.printf("%nNumber left over = %d slices",numberOfLeftOver);
 				productCatalogy();
 			case "3":
 				System.out.println("How may we be of service?\nHow many guest will you be serving?");
 				guestNumber = input.next();
 				guestNo = Integer.valueOf(guestNumber);
-				numberOfBoxes = guestNo / 8 + guestNo % 8;
+				numberOfBoxes = (guestNo + 8) / 8;
 				price = 3000 * numberOfBoxes;
-				System.out.printf("Number Of Boxes = %d\nPrice = N%d",numberOfBoxes,price);
+				numberOfLeftOver = ((int)numberOfBoxes * 8) - guestNo;
+				System.out.printf("Number Of Boxes = %d boxes\nPrice = N%d",numberOfBoxes,price);
+				System.out.printf("%nNumber left over = %d slices",numberOfLeftOver);
 				productCatalogy();
 			case "4":
 				System.out.println("How may we be of service?\nHow many guest will you be serving?");
 				guestNumber = input.next();
 				guestNo = Integer.valueOf(guestNumber);
-				numberOfBoxes = guestNo / 12 + guestNo % 12;
+				numberOfBoxes = (guestNo + 12) / 12;
 				price = 4200 * numberOfBoxes;
-				System.out.printf("Number Of Boxes = %d\nPrice = N%d",numberOfBoxes,price);
+				numberOfLeftOver = ((int)numberOfBoxes * 12) - guestNo;
+				System.out.printf("Number Of Boxes = %d boxes\nPrice = N%d",numberOfBoxes,price);
+				System.out.printf("%nNumber left over = %d slices",numberOfLeftOver);
 				productCatalogy();
 			default: System.out.println("Invalid input, your satisfaction is our business, please try again.");
 		}
