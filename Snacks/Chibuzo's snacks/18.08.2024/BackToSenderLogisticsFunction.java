@@ -1,4 +1,4 @@
-public class BackToSenderFunction{
+public class BackToSenderLogisticsFunction{
 	public static int payCheck(int userInput){
 
 

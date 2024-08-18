@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BackToSenderMain{
+public class BackToSenderLogistics{
 	public static void main(String [] args){
 
 	Scanner input = new Scanner(System.in);
@@ -17,7 +17,7 @@ public class BackToSenderMain{
 
 			if(userInput == -1)System.out.print("Program Successfully Exited!");
 
-			int riderCommission = BackToSenderFunction.payCheck(userInput);
+			int riderCommission = BackToSenderLogisticsFunction.payCheck(userInput);
 			System.out.printf("\nThe pay for this rider that made %d is = %d", userInput, riderCommission);
 		
 		}
