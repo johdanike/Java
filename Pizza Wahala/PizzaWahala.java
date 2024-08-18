@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class PizzaWahala{
 	public static void main(String[]args){
@@ -77,6 +76,8 @@ public class PizzaWahala{
 				productCatalogy();
 			default: System.out.println("Invalid input, your satisfaction is our business, please try again.");
 				productCatalogy();
+
+			
 
 		}
 
