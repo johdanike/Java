@@ -25,7 +25,6 @@ public class ConvertToCamelCase {
             if (c == '-' || c == '_') {
                 word.append(Character.toUpperCase(s.charAt(++i)));
             }
-//            else if (c == '_
         }
         sb.append(word);
         return sb.toString();

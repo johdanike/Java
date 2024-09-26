@@ -39,7 +39,7 @@ public class StackTest {
         assertFalse(strings.isEmpty());
     }
     @Test
-    public void pushXY_popX_Test(){
+    public void pushXY_popY_Test(){
         strings.push("The Good-news");
         strings.push("The Good-Shepherd");
         strings.pop();

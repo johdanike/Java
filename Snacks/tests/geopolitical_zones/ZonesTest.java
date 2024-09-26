@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 public class ZonesTest {
     Zones zones;
 
-
     @Test
-    public void testThatClassExists() {
+    public void testZonesClassExists() {
         Zones zones;
     }
+
 }

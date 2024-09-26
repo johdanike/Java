@@ -2,45 +2,47 @@ import java.util.Scanner;
 
 
 public class CreditCardValidator{
-	public static void main(String[]args){
+	public static void main(String[]args) {
 
-	Scanner input = new Scanner(System.in);
-		System.out.print("WELCOME TO JOHDAN'S CREDIT CARD VALIDITY CHECKER\n");
-		System.out.print("Hello kindly enter your credit card details to verify: ");
-		String cardNum = input.next();
+        Scanner input = new Scanner(System.in);
+        System.out.print("WELCOME TO JOHDAN'S CREDIT CARD VALIDITY CHECKER\n");
+        System.out.print("Hello kindly enter your credit card details to verify: ");
+        String cardNum = input.next();
 
-		if(validate(cardNum)){
-			String cardType = getCategory(cardNum);
-			double total = addTotal1Total2(cardNum);
-			String stage5 = validityChecker(cardNum);
+        String cardType;
+        double total;
+		String stage5;
+        if (validate(cardNum)) {
+            cardType = getCategory(cardNum);
+            total = addTotal1Total2(cardNum);
+            stage5 = validityChecker(cardNum);
 
-			System.out.println("*****************************************");
-			System.out.println("**Credit Card Type: "+cardType);
-			System.out.println("**Credit Card Number: "+cardNum);
-			System.out.println("**Credit Card Digit Length: "+cardNum.length());
-			String stage5 = validityChecker(cardNum);
-			System.out.println("**Credit Card Validity Status: "+stage5);
-			System.out.println("*****************************************");
-		}
-		else {
-			cardType = getCategory(cardNum);
-			total = addTotal1Total2(cardNum);
-			System.out.println("*****************************************");
-			System.out.println("**Credit Card Type: "+cardType);
-			System.out.println("**Credit Card Number: "+cardNum);
-			System.out.println("**Credit Card Digit Length: "+cardNum.length());
-			stage5 = validityChecker(cardNum);
-			System.out.println("**Credit Card Validity Status: "+stage5);
-			System.out.println("*****************************************");
-			//System.out.println("**Total: "+total);
-			double one = secondDigitRightToLeft(cardNum);
-			System.out.println("First: "+one);
-			double two = firstDigitRightToLeft(cardNum);
-			System.out.println("Second: "+two);
-			System.out.println("**Total: "+total);
+            System.out.println("*****************************************");
+            System.out.println("**Credit Card Type: " + cardType);
+            System.out.println("**Credit Card Number: " + cardNum);
+            System.out.println("**Credit Card Digit Length: " + cardNum.length());
+            stage5 = validityChecker(cardNum);
+            System.out.println("**Credit Card Validity Status: " + stage5);
+            System.out.println("*****************************************");
+        } else {
+            cardType = getCategory(cardNum);
+            total = addTotal1Total2(cardNum);
+            System.out.println("*****************************************");
+            System.out.println("**Credit Card Type: " + cardType);
+            System.out.println("**Credit Card Number: " + cardNum);
+            System.out.println("**Credit Card Digit Length: " + cardNum.length());
+	    stage5 = validityChecker(cardNum);
+            System.out.println("**Credit Card Validity Status: " + stage5);
+            System.out.println("*****************************************");
+            //System.out.println("**Total: "+total);
+            double one = secondDigitRightToLeft(cardNum);
+            System.out.println("First: " + one);
+            double two = firstDigitRightToLeft(cardNum);
+            System.out.println("Second: " + two);
+            System.out.println("**Total: " + total);
 
-		}
-	}
+        }
+    }
 
 	private static boolean validate(String cardNum){
 		return cardNum.length() < 13 || cardNum.length() > 16;

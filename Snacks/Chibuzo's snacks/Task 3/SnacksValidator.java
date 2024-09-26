@@ -31,8 +31,8 @@ public class SnacksValidator{
 	switch(entry){
 		case "1": System.out.print("\nFunction that returns the largest element in a list");
 			int [] list = {2,6,5,2,7,8,1,2,9,45,2,5,23,12,8,6};	
-			int [] result = SnackTest.largestElementFinder(list));
-			System.out.println("The largest element in this list is "+Arrays.toString(result));
+//			int [] result = SnackTest.largestElementFinder(list));
+//			System.out.println("The largest element in this list is "+Arrays.toString(result));
 
 
 	
