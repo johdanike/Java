@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Task 3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Snacks/Chibuzo's snacks/Task 3/junit-jupiter-api-5.10.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Snacks/Chibuzo's snacks/Task 3/junit-platform-console-standalone-1.10.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

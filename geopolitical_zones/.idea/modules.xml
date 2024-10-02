@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/geopolitical zones/geopolitical zones.iml" filepath="$PROJECT_DIR$/geopolitical zones/geopolitical zones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geopolitical_zones.iml" filepath="$PROJECT_DIR$/geopolitical_zones.iml" />
+    </modules>
+  </component>
+</project>

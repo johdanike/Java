@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bank/Bank.iml" filepath="$PROJECT_DIR$/Bank/Bank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Class Works/Class Works.iml" filepath="$PROJECT_DIR$/Class Works/Class Works.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Desktop.iml" filepath="$PROJECT_DIR$/Desktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Dietel/Dietel.iml" filepath="$PROJECT_DIR$/Dietel/Dietel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Snacks/Jennifer's snacks/Jennifer's snacks.iml" filepath="$PROJECT_DIR$/Snacks/Jennifer's snacks/Jennifer's snacks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/New Java Docs/New Java Docs.iml" filepath="$PROJECT_DIR$/New Java Docs/New Java Docs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Snacks/Snacks.iml" filepath="$PROJECT_DIR$/Snacks/Snacks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mrFemi/mrFemi.iml" filepath="$PROJECT_DIR$/mrFemi/mrFemi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/surveyquestion/surveyquestion.iml" filepath="$PROJECT_DIR$/surveyquestion/surveyquestion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
+    </modules>
+  </component>
+</project>
