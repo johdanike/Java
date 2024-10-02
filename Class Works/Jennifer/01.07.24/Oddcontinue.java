@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class OddContinue{
+public class Oddcontinue{
 	public static void main(String[]args){
 	Scanner input = new Scanner(System.in);
 
