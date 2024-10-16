@@ -243,18 +243,12 @@ ul li a:hover{
     width: 662px;
     height: 351px;
 }
-/*.lists{*/
-/*    !*display: block;*!*/
-/*    !*width: 250px;*!*/
-/*    !*float: left;*!*/
-/*    margin: 800px 0px;*/
-/*    border-left: solid 5px #f8f8f8;*/
-/*    padding-right: 200px;*/
-/*}*/
 
 .lists{
-    width: 50%;
     display: flex;
+    justify-content: space-evenly;
+    border-left: solid 5px #f8f8f8;
+
 }
 .how-we-do-button{
     border: 0;

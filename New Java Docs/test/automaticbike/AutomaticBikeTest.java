@@ -1,6 +1,7 @@
 package automaticbike;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,6 +17,7 @@ public class AutomaticBikeTest {
 
     @Test
     public void bikeIsOff_iTurnItOn_itIsOn() {
+//        @DisplayName("Test that bike is on, i turn it on and it is now on")
         assertFalse(automaticBike.getIsOn());
         automaticBike.turnOnBike();
         assertTrue(automaticBike.getIsOn());
