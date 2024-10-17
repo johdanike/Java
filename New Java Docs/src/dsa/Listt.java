@@ -73,6 +73,14 @@ public class Listt {
         return list;
     }
 
+
+    public String get(int index) {
+        if(index >= 0 && index < size) {
+            return list[index];
+        }else{
+            throw new IndexOutOfBoundsException("No such index");
+        }
+    }
     public int getSize() {
         return this.size;
     }
