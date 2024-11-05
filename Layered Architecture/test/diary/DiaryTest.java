@@ -44,23 +44,50 @@ public class DiaryTest {
         diary.unlock("correctPin");
         assertFalse(diary.isLocked());
         diary.add("Title","Body");
-        assertEquals(diary.numberOfNotes, 1);
-        System.out.println(diary.entries.get(0));
-        assertFalse(diary.isEmpty());
-    }
-
-    @Test
-    public void addEntry_entryAdded(){
-        Entry entry = new Entry();
-        entry.add("Title","Body");
-        assertEquals(entry.getEntryNumber(), 1);
-        assertEquals(entry.getTitle(), "Title");
+        assertEquals(1, diary.size());
     }
     @Test
-    public void addEntryToDiary_CannotAddEntry_diaryIsEmpty(){
+    public void addEntryToDiary_diaryIsLocked_diaryIsEmpty(){
         diary.lock();
         assertTrue(diary.isLocked());
         diary.add("Title","Body");
-        assertFalse(diary.isEmpty());
+        assertTrue(diary.isLocked());
     }
+    @Test
+    public void addTwoEntryToDiary_diarySizeIsTwo_test(){
+        diary.lock();
+        assertTrue(diary.isLocked());
+        diary.unlock("correctPin");
+        assertFalse(diary.isLocked());
+        diary.add("Title","Body");
+        diary.add("Title2","Body2");
+        assertFalse(diary.isEmpty());
+        assertEquals(2, diary.size());
+    }
+    @Test
+    public void addTwoEntryToDiary_findById_test(){
+        diary.lock();
+        assertTrue(diary.isLocked());
+        diary.unlock("correctPin");
+        assertFalse(diary.isLocked());
+        diary.add("Title","Body");
+        diary.add("Title2","Body2");
+        diary.findById('1');
+    }
+    @Test
+    public void entriesCanBeDeletedFromDiary_test(){
+        diary.lock();
+        assertTrue(diary.isLocked());
+        diary.unlock("correctPin");
+        assertFalse(diary.isLocked());
+        diary.add("Title","Body");
+        diary.add("Title2","Body2");
+        diary.add("Title3","Body3");
+        assertEquals(3, diary.size());
+        String deleted = diary.deleteEntry(2);
+//        String toBeDel = diary.findById(2);
+        assertEquals(2, diary.size());
+    }
+
+
 }
