@@ -10,10 +10,10 @@ public class PizzaWahala{
 
 
 		System.out.print("S/N \tPizza type \tNumber Of Slices \tPrice Per Box");
-		System.out.printf("%n%s%15s%15s%22s","1", "Sapa Size","  4","  2000");
-		System.out.printf("%n%s%15s%15s%22s","2", "Small Money" ,"  6" ,"  2400");
-		System.out.printf("%n%s%15s%15s%22s","3", "Big Boys" ,"  8" ,"  3000");
-		System.out.printf("%n%s%15s%15s%22s","4", "Odogwu", "  12", "  4200");
+		System.out.printf("%n %s %15s %15s %22s","1", "Sapa Size","  4","  2000");
+		System.out.printf("%n %s %15s %15s %22s","2", "Small Money" ,"  6" ,"  2400");
+		System.out.printf("%n %s %15s %15s %22s","3", "Big Boys" ,"  8" ,"  3000");
+		System.out.printf("%n %s %15s %15s %22s","4", "Odogwu", "  12", "  4200");
 			
 		System.out.println();
 		productCatalogy();
